@@ -1,26 +1,13 @@
-CLASS zcl_170423842_sel_table_exec DEFINITION
-  PUBLIC
-  FINAL
-  CREATE PUBLIC .
+class ZCL_170423842_SEL_TABLE_EXEC definition
+  public
+  create private .
 
-  PUBLIC SECTION.
-
-    INTERFACES if_oo_adt_classrun .
-  PROTECTED SECTION.
-  PRIVATE SECTION.
+public section.
+protected section.
+private section.
 ENDCLASS.
 
 
 
-CLASS zcl_170423842_sel_table_exec IMPLEMENTATION.
-
-
-  METHOD if_oo_adt_classrun~main.
-  DATA: name TYPE /dmo/carrier_name.
-  SELECT SINGLE FROM /dmo/carrier
-    FIELDS name
-    WHERE carrier_id = 'SQ'
-    INTO @name.
-    out->write( |Carrier Name is: { name }| ).
-  ENDMETHOD.
+CLASS ZCL_170423842_SEL_TABLE_EXEC IMPLEMENTATION.
 ENDCLASS.
